@@ -20,6 +20,9 @@ class BookListViewModel : ViewModel() {
                 // Handle book click
             }
             is BookListAction.OnTabSelected -> {
+                println(
+                    "Selected tab index: ${action.index}"
+                )
                 _state.update {
                     it.copy(selectedTabIndex = action.index)
                 }
