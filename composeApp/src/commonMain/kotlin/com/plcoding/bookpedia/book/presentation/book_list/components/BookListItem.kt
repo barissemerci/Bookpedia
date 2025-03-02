@@ -1,4 +1,4 @@
-package com.plcoding.bookpedia.book.presentation.book_list.components
+package com.barissemerci.bookpedia.book.presentation.book_list.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -38,7 +38,7 @@ import cmp_bookpedia.composeapp.generated.resources.book_error_2
 import coil3.compose.rememberAsyncImagePainter
 import com.barissemerci.bookpedia.core.presentation.LightBlue
 import com.barissemerci.bookpedia.core.presentation.SandYellow
-import com.plcoding.bookpedia.book.domain.Book
+import com.barissemerci.bookpedia.book.domain.Book
 import org.jetbrains.compose.resources.painterResource
 import kotlin.math.round
 

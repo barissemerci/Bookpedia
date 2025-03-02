@@ -1,6 +1,5 @@
-package com.plcoding.bookpedia.core.domain
+package com.barissemerci.bookpedia.core.domain
 
-import com.barissemerci.bookpedia.core.domain.Error
 
 sealed interface DataError : Error {
     enum class Remote : DataError {

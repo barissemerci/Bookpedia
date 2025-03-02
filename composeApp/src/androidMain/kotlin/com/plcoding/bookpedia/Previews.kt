@@ -1,15 +1,14 @@
-package com.plcoding.bookpedia
+package com.barissemerci.bookpedia
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.plcoding.bookpedia.book.domain.Book
-import com.plcoding.bookpedia.book.presentation.book_list.BookListScreen
-import com.plcoding.bookpedia.book.presentation.book_list.BookListState
-import com.plcoding.bookpedia.book.presentation.book_list.books
-import com.plcoding.bookpedia.book.presentation.book_list.components.BookListItem
-import com.plcoding.bookpedia.book.presentation.book_list.components.BookSearchBar
+import com.barissemerci.bookpedia.book.domain.Book
+import com.barissemerci.bookpedia.book.presentation.book_list.BookListScreen
+import com.barissemerci.bookpedia.book.presentation.book_list.BookListState
+import com.barissemerci.bookpedia.book.presentation.book_list.components.BookListItem
+import com.barissemerci.bookpedia.book.presentation.book_list.components.BookSearchBar
 
 @Preview(showBackground = true)
 @Composable
@@ -49,14 +48,14 @@ private fun BookListItemPreview() {
 }
 
 
-
 @Preview(showBackground = true)
 @Composable
-private fun BookListScreenPreview(){
+private fun BookListScreenPreview() {
     BookListScreen(
         state = BookListState(
-            searchResults = books,
+            searchResults = emptyList(),
         ),
         onAction = {}
     )
 }
+

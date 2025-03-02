@@ -1,4 +1,4 @@
-package com.plcoding.bookpedia.book.data.dto
+package com.barissemerci.bookpedia.book.data.dto
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

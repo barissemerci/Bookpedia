@@ -1,7 +1,7 @@
-package com.plcoding.bookpedia.core.data
+package com.barissemerci.bookpedia.core.data
 
 import com.barissemerci.bookpedia.core.domain.Result
-import com.plcoding.bookpedia.core.domain.DataError
+import com.barissemerci.bookpedia.core.domain.DataError
 import io.ktor.client.call.NoTransformationFoundException
 import io.ktor.client.call.body
 import io.ktor.client.network.sockets.SocketTimeoutException
