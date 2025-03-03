@@ -5,7 +5,7 @@ import com.barissemerci.bookpedia.book.domain.Book
 
 fun SearchedBookDto.toBook(): Book {
     return Book(
-        id = id,
+        id = id.substringAfterLast("/"), // remove the /works/ prefix
         title = title,
         imageUrl = if (coverKey != null) {
             "https://covers.openlibrary.org/b/olid/${coverKey}-L.jpg"
