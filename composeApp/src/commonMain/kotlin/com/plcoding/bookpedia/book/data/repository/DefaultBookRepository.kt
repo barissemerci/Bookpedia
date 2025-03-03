@@ -6,7 +6,7 @@ import com.barissemerci.bookpedia.book.data.network.RemoteBookDataSource
 import com.barissemerci.bookpedia.book.domain.Book
 import com.barissemerci.bookpedia.core.domain.DataError
 import com.barissemerci.bookpedia.core.domain.map
-import com.plcoding.bookpedia.book.domain.BookRepository
+import com.barissemerci.bookpedia.book.domain.BookRepository
 
 class DefaultBookRepository(
     private val remoteBookDataSource: RemoteBookDataSource

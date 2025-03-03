@@ -7,8 +7,8 @@ import androidx.lifecycle.viewModelScope
 import com.barissemerci.bookpedia.book.domain.Book
 import com.barissemerci.bookpedia.core.domain.onError
 import com.barissemerci.bookpedia.core.domain.onSuccess
-import com.plcoding.bookpedia.book.domain.BookRepository
-import com.plcoding.bookpedia.core.presentation.toUiText
+import com.barissemerci.bookpedia.book.domain.BookRepository
+import com.barissemerci.bookpedia.core.presentation.toUiText
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow

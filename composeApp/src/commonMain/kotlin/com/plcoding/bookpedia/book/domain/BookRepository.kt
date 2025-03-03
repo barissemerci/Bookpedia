@@ -1,6 +1,5 @@
-package com.plcoding.bookpedia.book.domain
+package com.barissemerci.bookpedia.book.domain
 
-import com.barissemerci.bookpedia.book.domain.Book
 import com.barissemerci.bookpedia.core.domain.DataError
 import com.barissemerci.bookpedia.core.domain.Result
 

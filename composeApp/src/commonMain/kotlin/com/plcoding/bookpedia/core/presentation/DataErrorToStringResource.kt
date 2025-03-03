@@ -1,4 +1,4 @@
-package com.plcoding.bookpedia.core.presentation
+package com.barissemerci.bookpedia.core.presentation
 
 import cmp_bookpedia.composeapp.generated.resources.Res
 import cmp_bookpedia.composeapp.generated.resources.error_disk_full
@@ -8,7 +8,6 @@ import cmp_bookpedia.composeapp.generated.resources.error_serialization
 import cmp_bookpedia.composeapp.generated.resources.error_too_many_requests
 import cmp_bookpedia.composeapp.generated.resources.error_unknown
 import com.barissemerci.bookpedia.core.domain.DataError
-import com.barissemerci.bookpedia.core.presentation.UiText
 
 fun DataError.toUiText(): UiText {
     val stringRes = when (this) {
