@@ -1,6 +1,7 @@
 package com.barissemerci.bookpedia.book.data.mappers
 
 import com.barissemerci.bookpedia.book.data.dto.SearchedBookDto
+import com.barissemerci.bookpedia.book.data.database.BookEntity
 import com.barissemerci.bookpedia.book.domain.Book
 
 fun SearchedBookDto.toBook(): Book {
@@ -21,4 +22,37 @@ fun SearchedBookDto.toBook(): Book {
         numPages = numPagesMedian,
         numEditions = numEditions ?: 0,
     )
+}
+
+fun Book.toBookEntity(): BookEntity {
+    return BookEntity(
+        id = id,
+        title = title,
+        imageUrl = imageUrl,
+        authors = authors,
+        languages = languages,
+        description = description,
+        firstPublishYear = firstPublishYear,
+        ratingsAverage = averageRating,
+        ratingsCount = ratingCount,
+        numberPagesMedian = numPages,
+        numEditions = numEditions
+    )
+}
+
+fun BookEntity.toBook(): Book {
+    return Book(
+        id = id,
+        title = title,
+        imageUrl = imageUrl,
+        authors = authors,
+        languages = languages,
+        description = description,
+        firstPublishYear = firstPublishYear,
+        averageRating = ratingsAverage,
+        ratingCount = ratingsCount,
+        numPages = numberPagesMedian,
+        numEditions = numEditions
+    )
+
 }

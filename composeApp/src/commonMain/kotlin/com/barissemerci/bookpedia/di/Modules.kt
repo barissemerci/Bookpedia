@@ -1,5 +1,8 @@
 package com.barissemerci.bookpedia.di
 
+import androidx.sqlite.driver.bundled.BundledSQLiteDriver
+import com.barissemerci.bookpedia.book.data.database.DatabaseFactory
+import com.barissemerci.bookpedia.book.data.database.FavoriteBookDatabase
 import com.barissemerci.bookpedia.book.data.network.KtorRemoteBookDataSource
 import com.barissemerci.bookpedia.book.data.network.RemoteBookDataSource
 import com.barissemerci.bookpedia.book.data.repository.DefaultBookRepository
@@ -14,7 +17,7 @@ import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.bind
 import org.koin.dsl.module
 
-expect val platformModule : Module
+expect val platformModule: Module
 val sharedModule = module {
     single {
         HttpClientFactory.create(get())
@@ -30,4 +33,14 @@ val sharedModule = module {
     viewModelOf(::BookListViewModel)
     viewModelOf(::SelectedBookViewModel)
     viewModelOf(::BookDetailViewModel)
+
+    single {
+        get<DatabaseFactory>().create()
+            .setDriver(BundledSQLiteDriver())
+            .build()
+    }
+
+    single { get<FavoriteBookDatabase>().favoriteBookDao }
+
+
 }
