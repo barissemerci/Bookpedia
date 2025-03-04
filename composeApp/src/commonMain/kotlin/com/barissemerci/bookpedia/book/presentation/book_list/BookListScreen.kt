@@ -215,6 +215,7 @@ fun BookListScreen(
                                 } else {
                                     BookList(
                                         books = state.favoriteBooks,
+                                        modifier = Modifier.fillMaxSize(),
                                         onBookClick = { onAction(BookListAction.OnBookClick(it)) },
                                         scrollState = favoriteBookListState
                                     )
